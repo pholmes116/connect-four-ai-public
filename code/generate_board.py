@@ -3,18 +3,14 @@ import sys
 import pygame
 import math
 import random
+import pandas as pd
 
-
-BLUE = (0,0,255)
-BLACK = (0,0,0)
-RED = (255,0,0)
-YELLOW = (255,255,0)
 
 ROW_COUNT = 6
 COLUMN_COUNT = 7
 
-def create_board():
-	board = np.zeros((ROW_COUNT,COLUMN_COUNT))
+def create_board(ROW_COUNT, COLUMN_COUNT):
+	board = np.zeros((ROW_COUNT,COLUMN_COUNT), dtype= int)
 	return board
 
 def drop_piece(board, row, col, piece):
@@ -57,34 +53,6 @@ def winning_move(board, piece):
 				return True
 
 
-
-board = create_board()
-print_board(board)
-game_over = False
-turn = 0
-
-
-def bot_move(board, piece):
-    valid_locations = [col for col in range(COLUMN_COUNT) if is_valid_location(board, col)]
-    col = random.choice(valid_locations)
-    row = get_next_open_row(board, col)
-    drop_piece(board, row, col, piece)
-
-while not game_over:
-    # Bot 1 move
-    if turn == 0:
-        bot_move(board, 1)
-        if winning_move(board, 1):
-            print("Bot 1 wins!")
-            game_over = True
-
-    # Bot 2 move
-    else:
-        bot_move(board, 2)
-        if winning_move(board, 2):
-            print("Bot 2 wins!")
-            game_over = True
-
-    print_board(board)
-    turn += 1
-    turn = turn % 2
+def generate_board_size(rows, columns):
+	board = create_board(rows, columns)
+	return board 
