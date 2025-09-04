@@ -1,5 +1,7 @@
 # Comparative Study of AI Algorithms for Connect Four
 
+We developed and compared three AI agents (Monte Carlo Tree Search, Alpha-Beta Pruning, and Alpha-Beta with evaluation) for the game of Connect Four. Testing on both the standard board and rule variations, our experiments highlight tradeoffs between accuracy, efficiency, and adaptability, with Alpha-Beta plus evaluation performing strongest overall.
+
 ## Authors
 
 Peter Holmes, Freya Nagel, Yonatan Paserman, Rebecca Wilhelmi
