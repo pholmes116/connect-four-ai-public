@@ -52,4 +52,4 @@ We compared these algorithms on the standard 7×6 board as well as under modifie
 
 ## Contact
 
-For questions or contributions, reach out via GitHub Issues or email pholmes116@gmail.com.
+For questions or contributions, reach out via GitHub Issues or email pholmes116@gmail.com/J.paserman@lse.ac.uk.
